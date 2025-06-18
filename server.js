@@ -14,7 +14,7 @@ const server = http.createServer((req, res)=>{
     }else if(req.url === "/reg"){
         text = "Register page";
         res.end(text)
-    }else if(req.url === "/handlerLogin"){
+    }else if(req.url === "/handlerLogin" && req.method === "POST"){
         console.log(req);
         let chunks = [];
         req.on('data', chunk => {chunks.push(chunk)});
