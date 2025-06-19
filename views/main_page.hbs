@@ -1,3 +1,9 @@
 <div class="container my-5">
-  <h1 class="text-center">Главная страница</h1>
+    {{#each articles}}
+        <div class="article">
+            <a href="/articles/{{this.id}}"><h2>{{this.title}}</h2></a>
+            <p>{{this.content}}</p>
+        </div>
+        <hr>
+    {{/each}}
 </div>

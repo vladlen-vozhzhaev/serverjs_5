@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="text-center">Добавить статью</h2>
+    <div class="col-sm-8 mx-auto">
+        <form action="/addArticle" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label>Заголовок:</label>
+                <input type="text" name="title" required class="form-control" placeholder="Заголовок">
+            </div>
+            <div class="mb-3">
+                <label>Контент:</label>
+                <textarea name="content" rows="5" required class="form-control" placeholder="Контент"></textarea>
+            </div>
+            <div class="mb-3">
+                <label>Автор:</label>
+                <input type="text" name="author" required class="form-control" placeholder="Автор">
+            </div>
+            <button type="submit" class="w-100 btn btn-primary">Добавить</button>
+        </form>
+    </div>
+</div>

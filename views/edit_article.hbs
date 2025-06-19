@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="text-center">Добавить статью</h2>
+    <div class="col-sm-8 mx-auto">
+        <form action="/editArticle" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{article.id}}" name="article_id">
+            <div class="mb-3">
+                <label>Заголовок:</label>
+                <input type="text" name="title" value="{{article.title}}" required class="form-control" placeholder="Заголовок">
+            </div>
+            <div class="mb-3">
+                <label>Контент:</label>
+                <textarea name="content" rows="5" required class="form-control" placeholder="Контент">{{article.content}}</textarea>
+            </div>
+            <button type="submit" class="w-100 btn btn-primary">Добавить</button>
+        </form>
+    </div>
+</div>
