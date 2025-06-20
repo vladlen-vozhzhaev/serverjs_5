@@ -36,7 +36,12 @@
                         <a class="nav-link disabled">Отключенная</a>
                     </li>
                 </ul>
-                <a href="/login" class="btn btn-success">Войти</a>
+                {{#if user}}
+                    <span>Привет, {{user.username}}!</span>
+                {{else}}
+                    <a href="/login" class="btn btn-success">Войти</a>
+                    <a href="/reg" class="btn btn-success">Регистрация</a>
+                {{/if}}
             </div>
         </div>
     </nav>

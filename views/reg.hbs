@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="text-center">Регистрация</h1>
+    <div class="col-sm-4 mx-auto">
+        {{#if error}}
+            <div class="alert alert-danger">
+                {{error}}
+            </div>
+        {{/if}}
+    </div>
+    <div class="col-sm-4 mx-auto">
+        <form action="/reg" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="username" placeholder="Имя">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="password" placeholder="Пароль">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="form-control btn btn-primary" value="Войти">
+            </div>
+        </form>
+    </div>
+</div>
